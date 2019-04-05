@@ -6,14 +6,28 @@ import Signin from './auth/Signin.js';
 import Jokes from './jokes/Jokes.js';
 
 class App extends Component {
+  logout = () => {
+    localStorage.removeItem('token');
+    // this.props.history.push('/signin');
+  };
+
   render() {
     return (
       <div className="App">
         <header>
-          <NavLink to="/signup">Sign Up</NavLink>
-          <NavLink to="/signin">Sign In</NavLink>
-          <NavLink to="/jokes">Jokes</NavLink>
-          <button>Log out</button>
+          <NavLink to="/jokes" activeClassName="active">
+            Home
+          </NavLink>
+          <NavLink to="/signup" activeClassName="active">
+            Sign Up
+          </NavLink>
+          <NavLink to="/signin" activeClassName="active">
+            Sign In
+          </NavLink>
+          <NavLink to="/jokes" activeClassName="active">
+            Jokes
+          </NavLink>
+          <button onClick={this.logout}>Log out</button>
         </header>
         <div className="main">
           <Route path="/signup" component={Signup} />
