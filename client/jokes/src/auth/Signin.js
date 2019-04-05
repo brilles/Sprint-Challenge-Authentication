@@ -30,6 +30,7 @@ export default class Signin extends React.Component {
   render() {
     return (
       <>
+        <h1>Sign in:</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

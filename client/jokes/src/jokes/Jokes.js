@@ -9,15 +9,15 @@ class Jokes extends React.Component {
   };
 
   componentDidMount() {
-    (async function retrieveJokes() {
-      try {
-        const jokes = await axios.get('http://localhost:3300/api/jokes');
-        console.log(jokes);
-        // this.setState({ jokes: jokes });
-      } catch (error) {
+    axios
+      .get('http://localhost:3300/api/jokes')
+      .then(res => {
+        console.log(res.data);
+        this.setState({ jokes: res.data });
+      })
+      .catch(error => {
         console.log(error);
-      }
-    })();
+      });
   }
 
   render() {
@@ -26,7 +26,7 @@ class Jokes extends React.Component {
         <h2>Jokes:</h2>
         {this.state.jokes.map(joke => (
           <div key={joke.id}>
-            <p>{joke}</p>
+            <p>{joke.joke}</p>
           </div>
         ))}
       </div>

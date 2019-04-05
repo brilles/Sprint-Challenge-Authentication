@@ -15,9 +15,6 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <NavLink to="/jokes" activeClassName="active">
-            Home
-          </NavLink>
           <NavLink to="/signup" activeClassName="active">
             Sign Up
           </NavLink>

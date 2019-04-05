@@ -41,6 +41,7 @@ export default class Signup extends React.Component {
   render() {
     return (
       <>
+        <h1>Sign up:</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -53,7 +54,7 @@ export default class Signup extends React.Component {
           <input
             type="password"
             name="password"
-            placeholder="username"
+            placeholder="password"
             value={this.state.password}
             onChange={this.handleChange}
             required
