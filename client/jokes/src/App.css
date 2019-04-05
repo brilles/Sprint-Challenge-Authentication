@@ -32,8 +32,12 @@ a {
   width: 500px;
   margin: 0 auto;
   background: white;
-  border: 1px solid blue;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
+
 h1 {
   margin-bottom: 0px;
 }
@@ -49,13 +53,37 @@ form {
 
 input {
   box-sizing: border-box;
-  padding: 2px;
+  padding: 5px;
   margin: 2px;
   width: 80%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
 }
 
 form > button {
   margin-top: 10px;
   padding: 5px 0;
   width: 80%;
+}
+
+p {
+  padding: 10px;
+  margin: 10px 20px;
+  background: rgb(231, 230, 230);
+  border-radius: 3px;
+}
+
+button {
+  border-radius: 3px;
+  border: 1px solid red;
+  background: red;
+  color: white;
+}
+
+header > a > button {
+  padding: 8px 5px;
+}
+
+.not-active {
+  border: none;
 }

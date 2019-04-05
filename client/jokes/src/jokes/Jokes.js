@@ -12,7 +12,6 @@ class Jokes extends React.Component {
     axios
       .get('http://localhost:3300/api/jokes')
       .then(res => {
-        console.log(res.data);
         this.setState({ jokes: res.data });
       })
       .catch(error => {
@@ -25,8 +24,8 @@ class Jokes extends React.Component {
       <div className="main-content">
         <h2>Jokes:</h2>
         {this.state.jokes.map(joke => (
-          <div key={joke.id}>
-            <p>{joke.joke}</p>
+          <div className="joke-card" key={joke.id}>
+            <p>~ {joke.joke}</p>
           </div>
         ))}
       </div>

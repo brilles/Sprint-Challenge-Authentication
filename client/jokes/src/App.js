@@ -8,7 +8,6 @@ import Jokes from './jokes/Jokes.js';
 class App extends Component {
   logout = () => {
     localStorage.removeItem('token');
-    // this.props.history.push('/signin');
   };
 
   render() {
@@ -24,7 +23,9 @@ class App extends Component {
           <NavLink to="/jokes" activeClassName="active">
             Jokes
           </NavLink>
-          <button onClick={this.logout}>Log out</button>
+          <NavLink to="/signin" activeClassName="active not-active">
+            <button onClick={this.logout}>Log out</button>
+          </NavLink>
         </header>
         <div className="main">
           <Route path="/signup" component={Signup} />
