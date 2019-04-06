@@ -29,9 +29,20 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
-1. What does bcrypt do to help us store passwords in a secure manner.
-1. What does bcrypt do to slow down attackers?
-1. What are the three parts of the JSON Web Token?
+
+The purpose of using sessions is to store information about the client that persists across requests. For example, to persist authentication data so that every time the client makes a request tht data is available.
+
+2. What does bcrypt do to help us store passwords in a secure manner.
+
+Bcyrpt helps us store passwords in a secure manner by hashing the password string. In addition, it allows for mutiple hashing rounds that can increase security.
+
+3. What does bcrypt do to slow down attackers?
+
+Bcrypt slows down attackers by adding time to what is called a Key Derived Function. One of the most commom attacks for passwords is the Brute-Force attack which can be implemented by pre-calculating hashes for all combinations of a certian length (Rainbow table). They then check every password in that table to the password. Bcrypt adds multiple rounds of hashing so that the attacker must know the hash, the specific alogorithm used, and the count of round. This slows them down.
+
+4. What are the three parts of the JSON Web Token?
+
+The three parts of a JSON Web Token are the header, the payload, and the signature.
 
 ## Project Set Up
 
@@ -48,9 +59,9 @@ Follow these steps for completing your project:
 
 - [ ] `cd` into the root of the project and run `yarn` to install dependencies.
 - [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
 
 Helpful Tip on Testing this Project:
 
